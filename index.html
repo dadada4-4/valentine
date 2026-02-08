@@ -42,8 +42,7 @@
 
   <h1>Will you be my Valentine? 💖</h1>
 
-  <img src="P1010513.JPG">
-
+  <img id="yesImage" src="IMG_1602.jpg" alt="Yay!" style="display: none; width: 300px; border-radius: 20px;">
   <br>
 
   <button class="yes" onclick="yesClicked()">YES ❤️</button>
@@ -51,7 +50,25 @@
 
   <script>
     function yesClicked() {
-      document.body.innerHTML = "<h1>YAY!!! 💕🥰</h1><p>You just made me very happy ❤️</p>";
+      // hide video
+    const video = document.getElementById("valentineVideo");
+    video.pause();
+    video.style.display = "none";
+
+    // show picture
+    const img = document.getElementById("yesImage");
+    img.style.display = "block"
+      
+      document.body.innerHTML = "<h1>Juhuuuu!!! 💕🥰</h1><p>See you super soon 🥰❤️</p>";
+
+      // open Yellow after 5 seconds 💛
+    setTimeout(() => {
+      window.open(
+        "https://www.youtube.com/watch?v=yKNxeF4KMsY",
+        "_blank"
+      );
+    }, 6000); // 6000 ms = 6 seconds
+  }
     }
 
     function moveButton(btn) {

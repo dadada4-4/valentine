@@ -42,16 +42,18 @@
   <br>
 
   <button class="yes" onclick="yesClicked()">YES ❤️</button>
-  <button class="no" onclick="noClicked()">NO 💔</button>
+  <button class="no" onmouseover="moveButton(this)">NO 💔</button>
 
   <script>
     function yesClicked() {
       document.body.innerHTML = "<h1>YAY!!! 💕🥰</h1><p>You just made me very happy ❤️</p>";
     }
 
-    function noClicked() {
-      alert("Are you sure? 😢");
-    }
+    function moveButton(btn) {
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "vw";
+    btn.style.top = Math.random() * 80 + "vh";
+  }
   </script>
 
 </body>
